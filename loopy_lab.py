@@ -51,14 +51,14 @@ while running:
 
 
 
-#this is for quadrant on bottom left
+#this is for quadrant on bottom left(FINISHED)
     for line in range(2,201,8):
       for x_orange in range (200,401,8):
 
         pygame.draw.rect(screen,ORANGE,pygame.Rect(line,x_orange,5,5))
 
 
-  #for quadrant 6
+  #for quadrant 6(FINISHED)
     for line in range(202,402,8):
       for opposite in range (200,401,8):
        pygame.draw.rect(screen,WHITE,pygame.Rect(line,opposite,5,5))
@@ -67,7 +67,14 @@ while running:
        pygame.draw.rect(screen,ORANGE,pygame.Rect(line,opposite,5,5))
 
      
-
+  #for quadrant 7
+       #for quadrant 6(FINISHED)
+    for line in range(402,602,16):
+      for opposite in range (200,401,8):
+       pygame.draw.rect(screen,WHITE,pygame.Rect(line,opposite,5,5))
+    for line in range(402,602,8):
+      for opposite in range (200,401,8):
+       pygame.draw.rect(screen,ORANGE,pygame.Rect(line,opposite,5,5))
     
    
     # --(YOUR CODE ENDS HERE)-------------------------------------------------
