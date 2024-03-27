@@ -39,37 +39,37 @@ while running:
     # Draw a 50x50 pixel black square with top-left corner at (x, y) = (5, 10)
     #pygame.draw.rect(screen, BLACK, pygame.Rect(5, 10, 50, 50))
 
-    x_orange=300
-    for line in range(2,201,8):
-      y_yellow=201
-      for x_orange in range (1,y_yellow,8):
-        if y_yellow<10:
-            y_yellow=y_yellow-8
-            pygame.draw.rect(screen,YELLOW,pygame.Rect(line,x_orange,5,5))
 
-   
-   
-   
-   
-   
+     
+    for line in range(2,201,8):
+      subtract=201
+      for yellow_range in range (2,subtract,8):
+        pygame.draw.rect(screen,YELLOW,pygame.Rect(line,yellow_range,5,5))
+        subtract=subtract-30
+
+
+
+
+
+#this is for quadrant on bottom left
     for line in range(2,201,8):
       for x_orange in range (200,401,8):
-    
+
         pygame.draw.rect(screen,ORANGE,pygame.Rect(line,x_orange,5,5))
 
-    
-  
+
+  #for quadrant 6
     for line in range(202,402,8):
-      
-      for x_orange in range (200,401,8):
-        if line  :
-         WHITE=ORANGE
-         pygame.draw.rect(screen,WHITE,pygame.Rect(line,x_orange,5,5))
-    
+      for opposite in range (200,401,8):
+       pygame.draw.rect(screen,WHITE,pygame.Rect(line,opposite,5,5))
+    for line in range(202,402,16):
+      for opposite in range (200,401,8):
+       pygame.draw.rect(screen,ORANGE,pygame.Rect(line,opposite,5,5))
+
      
 
-
-
+    
+   
     # --(YOUR CODE ENDS HERE)-------------------------------------------------
 
     # Update display
