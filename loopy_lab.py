@@ -23,6 +23,8 @@ MAROON=(117, 15, 39)
 ORANGE=(240, 135, 70)
 BLACK = (0, 0, 0)
 YELLOW=(245, 224, 118)
+GREY=(156, 156, 156)
+PURPLE=(163, 103, 149)
 # Main loop
 running = True
 
@@ -39,6 +41,8 @@ while running:
     # Draw a 50x50 pixel black square with top-left corner at (x, y) = (5, 10)
     #pygame.draw.rect(screen, BLACK, pygame.Rect(5, 10, 50, 50))
 
+  
+
 
      
     for line in range(2,201,8):
@@ -48,8 +52,8 @@ while running:
         subtract=subtract-30
 
 
-
-
+#The clashing colours are for identifying the quadrants at a galnce, please excuse the horrible colour theory
+#Not to eventually make this more readable
 
 #this is for quadrant on bottom left(FINISHED)
     for line in range(2,201,8):
@@ -61,22 +65,46 @@ while running:
   #for quadrant 6(FINISHED)
     for line in range(202,402,8):
       for opposite in range (200,401,8):
-       pygame.draw.rect(screen,WHITE,pygame.Rect(line,opposite,5,5))
+       pygame.draw.rect(screen,PURPLE,pygame.Rect(line,opposite,5,5))
     for line in range(202,402,16):
       for opposite in range (200,401,8):
        pygame.draw.rect(screen,ORANGE,pygame.Rect(line,opposite,5,5))
 
      
-  #for quadrant 7
-       #for quadrant 6(FINISHED)
-    for line in range(402,602,16):
-      for opposite in range (200,401,8):
-       pygame.draw.rect(screen,WHITE,pygame.Rect(line,opposite,5,5))
+  #for quadrant 7 (FINISHED)
+       
     for line in range(402,602,8):
       for opposite in range (200,401,8):
+       pygame.draw.rect(screen,YELLOW,pygame.Rect(line,opposite,5,5))
+    for line in range(402,602,8):
+      for opposite in range (200,401,16):
        pygame.draw.rect(screen,ORANGE,pygame.Rect(line,opposite,5,5))
+
+
+  #for quadrant 8 (FINISHED)
+  #this line if for the yellow horizontal spacing
+    for line in range(602,802,8):
+     for opposite in range (200,401,16):
+       pygame.draw.rect(screen,YELLOW,pygame.Rect(line,opposite,5,5))
+
+  #for the more dispersed while lines
+    for line in range(602,802,8):
+      for opposite in range (208,401,16):
+       pygame.draw.rect(screen,PURPLE,pygame.Rect(line,opposite,5,5))
+
+       #for the verticle (cross sticth )
+    for line in range(602,802,16):
+      for opposite in range (200,401,8):
+       pygame.draw.rect(screen,YELLOW,pygame.Rect(line,opposite,5,5))      
+    
+  
     
    
+
+  #lines for the quadrants
+    pygame.draw.line(screen,GREY,(1,200),(800,200),width=1)
+   
+
     # --(YOUR CODE ENDS HERE)-------------------------------------------------
 
     # Update display
