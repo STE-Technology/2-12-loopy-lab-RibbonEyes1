@@ -41,16 +41,19 @@ while running:
     # Draw a 50x50 pixel black square with top-left corner at (x, y) = (5, 10)
     #pygame.draw.rect(screen, BLACK, pygame.Rect(5, 10, 50, 50))
 
-  
 
-
-     
+    subtract=201
+    """ 
+  my attempt at squadrant 1
+    what I had tried to do was give the range limit a variable on the y axis
+    so that i could try and adjust the height of the loops
+    """
     for line in range(2,201,8):
-      subtract=201
-      for yellow_range in range (2,subtract,8):
-        pygame.draw.rect(screen,YELLOW,pygame.Rect(line,yellow_range,5,5))
-        subtract=subtract-30
-
+      for y in range (2,subtract,8):
+            pygame.draw.rect(screen,YELLOW,pygame.Rect(line,y,5,5))
+            while subtract>10:
+              subtract=subtract-10
+  
 
 #The clashing colours are for identifying the quadrants at a galnce, please excuse the horrible colour theory
 #Not to eventually make this more readable
@@ -92,7 +95,7 @@ while running:
       for opposite in range (208,401,16):
        pygame.draw.rect(screen,PURPLE,pygame.Rect(line,opposite,5,5))
 
-       #for the verticle (cross sticth )
+       #for the verticle (cross stitch )
     for line in range(602,802,16):
       for opposite in range (200,401,8):
        pygame.draw.rect(screen,YELLOW,pygame.Rect(line,opposite,5,5))      
