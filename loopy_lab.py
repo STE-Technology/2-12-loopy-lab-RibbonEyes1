@@ -64,15 +64,19 @@ while running:
        pygame.draw.rect(screen,PURPLE,pygame.Rect(line,y,5,5))
 
 #QUADRANT 2 (DONE)
-       decrease=2
+    decrease=2
     for line in range(202,401,8):
       decrease=decrease+8
       for x_orange in range(decrease,201,8):
         pygame.draw.rect(screen,YELLOW,pygame.Rect(line,x_orange,5,5))
 
 
-    
-  
+#QUADRANT 1 UNFINISHED
+    down=201
+    for line in range(2,201,8):
+      down=down-8
+      for x_orange in range(2,201,8):
+       pygame.draw.rect(screen,PURPLE,pygame.Rect(line,x_orange,5,5))
 
 #The clashing colours are for identifying the quadrants at a galnce, please excuse the horrible colour theory
 #Not to eventually make this more readable
