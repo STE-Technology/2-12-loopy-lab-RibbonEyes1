@@ -42,17 +42,36 @@ while running:
     #pygame.draw.rect(screen, BLACK, pygame.Rect(5, 10, 50, 50))
 
 
-    subtract=201
+
     """ 
   my attempt at squadrant 1
     what I had tried to do was give the range limit a variable on the y axis
     so that i could try and adjust the height of the loops
     """
-    for line in range(2,201,8):
+# turned out to be an indentation issue
+    #QUADRANT 3 FINISHED
+    subtract=201
+    for line in range(402,602,8):
+      subtract=subtract-8
       for y in range (2,subtract,8):
-            pygame.draw.rect(screen,YELLOW,pygame.Rect(line,y,5,5))
-            while subtract>10:
-              subtract=subtract-10
+         pygame.draw.rect(screen,YELLOW,pygame.Rect(line,y,5,5))
+
+#QUADRANT 8(FINISHED)
+    minus=2
+    for line in range (601,801,8):
+      minus=minus+8
+      for y in range(2,minus,8):
+       pygame.draw.rect(screen,PURPLE,pygame.Rect(line,y,5,5))
+
+#QUADRANT 2 (DONE)
+       decrease=2
+    for line in range(202,401,8):
+      decrease=decrease+8
+      for x_orange in range(decrease,201,8):
+        pygame.draw.rect(screen,YELLOW,pygame.Rect(line,x_orange,5,5))
+
+
+    
   
 
 #The clashing colours are for identifying the quadrants at a galnce, please excuse the horrible colour theory
